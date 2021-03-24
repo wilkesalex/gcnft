@@ -13,4 +13,7 @@ The idea of GCNFT is to create a system that allows people with github commits (
 * The user will then have the ability to trade this NFT in a marketplace.
 
 
+
+
+
 ![NFTSystemMockup](https://user-images.githubusercontent.com/1847652/112325267-711db280-8cab-11eb-9b85-ffe5a96263b7.png)
