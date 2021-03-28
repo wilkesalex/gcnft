@@ -1,0 +1,32 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"commitContract": "./cadence/contracts/commitContract.cdc"
+   },
+	"networks": {
+		"emulator": {
+			"host": "127.0.0.1:3569",
+			"chain": "flow-emulator"
+		}
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "0839df4cd3f954c6d1c19e67cdc972575e5f4178e32b635560c140f9aefe3a42",
+			"chain": "flow-emulator",
+			"privateKey": "privateKey",
+     		"sigAlgorithm": "ECDSA_P256",
+     		"hashAlgorithm": "SHA3_256"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			 "emulator-account": ["commitContract"]
+		}
+   }
+}
