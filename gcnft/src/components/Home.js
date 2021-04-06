@@ -11,7 +11,7 @@ export default function Home() {
     return <Redirect to="/login" />;
   }
 
-  const { avatar_url, name, public_repos, followers, following } = state.user
+  const { avatar_url, name, public_repos, followers, following, bio } = state.user
 
   const handleLogout = () => {
     dispatch({
@@ -30,6 +30,16 @@ export default function Home() {
             <span>{public_repos} Repos</span>
             <span>{followers} Followers</span>
             <span>{following} Following</span>
+            <div class="form-group">
+    <label for="exampleFormControlSelect1">Commits </label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>github-hash-1</option>
+      <option>github-hash-2</option>
+      <option>github-hash-3</option>
+      <option>github-hash-4</option>
+      <option>github-hash-5</option>
+    </select>
+  </div>
           </div>
         </div>
       </div>
