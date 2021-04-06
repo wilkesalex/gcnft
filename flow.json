@@ -14,7 +14,11 @@
 		"emulator": {
 			"host": "127.0.0.1:3569",
 			"chain": "flow-emulator"
-		}
+		},
+		"testnet": {
+			"host": "access.testnet.nodes.onflow.org:9000",
+			"chain": "flow-testnet"
+		  }
 	},
 	"accounts": {
 		"emulator-account": {
@@ -28,9 +32,18 @@
 		"second-account": {
 		  "address": "01cf0e2f2f715450",
 		  "keys": "0432f812e89f124bd6049ea70e08c1ba2b7e9af71e5ffceb84dbe5049425e3b3"
-		}
+		},
+		"testnet-account": {
+			"address": "0x0105a9fddab830b7",
+			"keys": "1bcc0a15dcc9587b7af5ae887c8da8c38956d2c839ff74a2b65fd8431c159236"
+		  }
 	},
 	"deployments": {
+		"testnet": {
+			"testnet-account": [
+				"commitContract", "CommitToken","MarketplaceContract"
+			]
+		  },
 		"emulator": {
 			 "emulator-account": ["commitContract", "CommitToken","MarketplaceContract"]
 		}
