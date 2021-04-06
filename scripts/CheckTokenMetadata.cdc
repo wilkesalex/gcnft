@@ -1,5 +1,4 @@
 import commitContract from 0xf8d6e0586b0a20c7
-
 pub fun main() : {String : String} {
     let nftOwner = getAccount(0xf8d6e0586b0a20c7)
     // log("NFT Owner")    

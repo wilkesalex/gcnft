@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {Providers} from "./global/providers.comp"
 import './styles/tailwind.css';
 import "./config"
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Providers>
     <App />
-  </React.StrictMode>,
+    </Providers>,
   document.getElementById('root')
 );
 
