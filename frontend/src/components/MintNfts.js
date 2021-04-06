@@ -17,17 +17,17 @@ export default function MintNfts() {
     const mintToken = async() => {
         console.log(form.name)
         const encoded = await fcl.send([
-            // fcl.payer(fcl.authz),
-            //  fcl.authorizations([fcl.authz]),
-            // fcl.limit(50),
-            // fcl.args([
-            //     fcl.arg(form.name,t.String),
-            //     fcl.arg(form.velocity,t.String),
-            //     fcl.arg(form.angle,t.String),
-            //     fcl.arg(form.rating,t.String),
-            //     fcl.arg(form.uri,t.String)    
-            //   ]),
-            fcl.transaction`
+            fcl.payer(fcl.authz),
+             fcl.authorizations([fcl.authz]),
+            fcl.limit(50),
+            fcl.args([
+                fcl.arg(form.name,t.String),
+                fcl.arg(form.velocity,t.String),
+                fcl.arg(form.angle,t.String),
+                fcl.arg(form.rating,t.String),
+                fcl.arg(form.uri,t.String)    
+              ]),
+            fcl.transaction `
         import commitContract from 0xf8d6e0586b0a20c7
                 
                 transaction {
@@ -60,7 +60,7 @@ export default function MintNfts() {
                 }
             
         
-                `,
+                `, 
                 fcl.proposer(fcl.currentUser().authorization),      
       ]);
       await fcl.decode(encoded);

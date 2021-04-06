@@ -5,11 +5,13 @@ import  UserNavBar from '../Navbar/UserNavBar';
 import TokenData from "../components/TokenData";
 import MarketPlace from "../components/MarketPlace";
 import MyCommits from "../components/MyCommits";
+import IPFS from "../components/IPFS";
 
 const routes = {
     
     "/marketplace": () => <MarketPlace />,
     "/dashboard": () => <MyCommits />,
+    "/IPFS": () => <IPFS />
    
 };
  
