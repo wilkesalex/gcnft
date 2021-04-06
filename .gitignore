@@ -1,0 +1,6 @@
+
+*.blob
+*.v8
+dist/*
+node_modules/*
+node_modules\*
