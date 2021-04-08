@@ -1,0 +1,28 @@
+{
+  "name": "gcnft_ipfs",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "parcel build index.html --no-scope-hoist",
+    "start": "parcel index.html",
+    "test": "test-ipfs-example"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ipfs-core": "^0.5.4",
+    "ipfs-http-client": "^49.0.4"
+  },
+  "devDependencies": {
+    "ipfs": "^0.54.4",
+    "parcel": "next",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rimraf": "^3.0.2",
+    "test-ipfs-example": "^3.0.0"
+  },
+  "browserslist": [
+    "last 2 versions and not dead and > 2%"
+  ]
+}
