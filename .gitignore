@@ -103,7 +103,7 @@ dist
 gcnft/package-lock.json
 
 
-
+# Ignore node modules
 *.blob
 *.v8
 dist/*
