@@ -101,3 +101,20 @@ dist
 # TernJS port file
 .tern-port
 gcnft/package-lock.json
+
+
+# Ignore node modules
+*.blob
+*.v8
+dist/*
+node_modules/*
+node_modules\*
+ipfs_demo/dist/*
+ipfs_demo/node_modules/*
+ipfs_demo/node_modules\*
+ipfs_demo\dist/*
+ipfs_demo\node_modules/*
+ipfs_demo\node_modules\*
+package-lock.json
+*/node_modules
+*\node_modules
