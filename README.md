@@ -17,3 +17,14 @@ The idea of GCNFT is to create a system that allows people with github commits (
 
 
 ![NFTSystemMockup](https://user-images.githubusercontent.com/1847652/112325267-711db280-8cab-11eb-9b85-ffe5a96263b7.png)
+
+## ✨ Requirements
+
+### 1. Install the Flow CLI
+
+Before you start, install the [Flow command-line interface (CLI)](https://docs.onflow.org/flow-cli).
+
+_⚠️ This project requires `flow-cli v0.15.0` or above._
+
+
+
