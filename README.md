@@ -18,13 +18,65 @@ The idea of GCNFT is to create a system that allows people with github commits (
 
 ![NFTSystemMockup](https://user-images.githubusercontent.com/1847652/112325267-711db280-8cab-11eb-9b85-ffe5a96263b7.png)
 
-## ✨ Requirements
+## ✨ Getting started
 
 ### 1. Install the Flow CLI
 
 Before you start, install the [Flow command-line interface (CLI)](https://docs.onflow.org/flow-cli).
+The Flow CLI is a command-line interface that provides useful utilities for building Flow applications. The tool we need in this demo is Flow emulator, a local emulator of Flow blockchain.
 
 _⚠️ This project requires `flow-cli v0.15.0` or above._
 
+### 2. Clone the project
+
+Clone the project
+```https://github.com/wilkesalex/gcnft.git```
 
 
+### 3. Starting the Services
+
+- Start Flow emulator
+Run `flow emulator start` at project root. Flow CLI uses `./flow.json` as config to start up the local Flow emulator.
+The emulator provides a local access node at `http://localhost:8080`
+
+- Deploy the contracts
+
+```flow project deploy```
+
+- You can execute the transactions at project root using the following commands
+`flow transactions send --code ./transactions/{filename, eg:mintCommitContract}.cdc --signer emulator-account`
+
+- Or scripts using the following command 
+`flow scripts execute --code ./scripts/{filename, eg:CheckTokenMetadata}.cdc`
+
+## Starting the demo app
+
+### 1. Go to frontend folder run the command
+
+```npm install```
+
+### 2. Run 
+
+```npm start```
+Server starts at `http://localhost:3000`
+
+## Starting IPFS
+
+1. ```npm install -g ipfs```
+
+2. Run these commands for CORS:
+
+```ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "["*"]"`
+```ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials "["true"]"```
+
+3. now you can run the local IPFS server:
+```jsipfs daemon```
+
+4.now you can run 
+
+    `npm install`
+    `npm start`
+then you need to take the HTTP API server address from the daemon and use this to connect to (probably just change the port)
+then open the Web UI from the daemon, go back to the web page
+upload a file - when you upload a file it gives you a link. check this link in local IPFS Web UI in Files -> Pins to see if it has a match. the local node will sync the file to other nodes
+if you click on the node, after some time, it will work on `ipfs.io`
