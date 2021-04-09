@@ -99,6 +99,7 @@ class App extends React.Component {
             <hr/>
           <form id='capture-media' onSubmit={this.handleSubmit}>
             <input type='file' name='input-file' id='input-file' onChange={this.captureFile} /><br/>
+            <label htmlFor='keep-filename'><input type='checkbox' id='keep-filename' name='keep-filename' /> keep filename</label>
           </form>
           <div>
             <a id="gateway-link" target='_blank'
