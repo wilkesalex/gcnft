@@ -49,6 +49,15 @@ The emulator provides a local access node at `http://localhost:8080`
 - Or scripts using the following command 
 `flow scripts execute --code ./scripts/{filename, eg:CheckTokenMetadata}.cdc`
 
+### 4. Setup the Github OAuth
+
+- Open Github.
+- Go to settings after clicking on your profile picture in the top-right corner.
+- Click on Developer settings.
+- Click on OAuth apps.
+- Fill out the details accordingly.
+- Copythe Client ID and Secrets and save them in a secure place.
+
 ## Starting the demo app
 
 ### 1. Go to frontend folder run the command
