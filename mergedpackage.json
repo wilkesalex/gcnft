@@ -1,15 +1,19 @@
 {
-  "name": "react-tailwindcss",
+  "name": "gcnftmain",
   "version": "0.1.0",
+  "description": "Alex Test Package Merge. Broken! - Github Commit NFT Minter",
   "private": true,
   "dependencies": {
     "@onflow/fcl": "0.0.67",
     "@onflow/types": "0.0.4",
+    "hookrouter": "^1.2.3",
+    "raviger": "^2.0.2",
+    "recoil": "^0.2.0",
+    "ipfs-core": "^0.5.4",
+    "ipfs-http-client": "^49.0.4",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
-    "hookrouter": "^1.2.3",
-    "raviger": "^2.0.2",
     "joi": "17.4.0",
     "mdi-react": "^7.5.0",
     "node-fetch": "2.6.1",
@@ -19,15 +23,16 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",
-    "web-vitals": "^1.1.1",
-    "recoil": "^0.2.0"
+    "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
-    "start": "npm run build:style && set PORT=3006 && react-scripts start",
-    "build": "react-scripts build",
+    "build:style": "tailwind build frontend/src/styles/index.css -o frontend/src/styles/tailwind.css",
+    "start": "npm run build:style && set PORT=3006 && react-scripts start && parcel ipfs_demo1/index.html && PORT=3001 react-scripts start",
+    "build": "react-scripts build && parcel build frontend/ipfs_demo1/index.html --no-scope-hoist",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rimraf frontend/ipfs_demo1/dist"
+    
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +52,12 @@
   "devDependencies": {
     "autoprefixer": "^9.8.0",
     "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "ipfs": "^0.54.4",
+    "parcel": "next",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rimraf": "^3.0.2",
+    "test-ipfs-example": "^3.0.0"
   }
 }

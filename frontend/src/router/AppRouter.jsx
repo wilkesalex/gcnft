@@ -5,12 +5,14 @@ import  UserNavBar from '../Navbar/UserNavBar';
 import TokenData from "../components/TokenData";
 import MarketPlace from "../components/MarketPlace";
 import MyCommits from "../components/MyCommits";
+import Login from "../components/Login";
+import Home from "../components/Home";
 
 const routes = {
-    
     "/marketplace": () => <MarketPlace />,
     "/dashboard": () => <MyCommits />,
-   
+    "/githublogin": () => <Login />,
+    "/home": () => <Home />
 };
  
 
