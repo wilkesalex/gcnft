@@ -1,7 +1,7 @@
 import React, {useState,  useEffect } from "react";
 import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types"
-
+import {A} from "hookrouter"
 
 export default function MintNfts() {
     const initForm = {
@@ -75,6 +75,9 @@ export default function MintNfts() {
 
   return (
     <div class="leading-loose">
+      <div class="mt-4">
+          <A href="/githublogin" class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" >Authorize</A>
+        </div>
       <form  class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
         <p class="text-gray-800 font-medium"> information</p>
         <div class="">
