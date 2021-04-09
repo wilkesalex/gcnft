@@ -122,5 +122,5 @@ package-lock.json
 *\node_modules
 */*/.env
 */.env
-*/.env.Local
-*/*/.env.Local
+*/.env.local
+*/*/.env.local
