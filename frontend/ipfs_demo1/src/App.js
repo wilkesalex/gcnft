@@ -82,7 +82,7 @@ class App extends React.Component {
   render () {
     if (this.state.ipfs) {
       return (
-        <div>
+        <div style={{ textAlign: 'center' }}>
 
 <form>
 <div class="form-group">
@@ -99,7 +99,6 @@ class App extends React.Component {
             <hr/>
           <form id='capture-media' onSubmit={this.handleSubmit}>
             <input type='file' name='input-file' id='input-file' onChange={this.captureFile} /><br/>
-            <label htmlFor='keep-filename'><input type='checkbox' id='keep-filename' name='keep-filename' /> keep filename</label>
           </form>
           <div>
             <a id="gateway-link" target='_blank'
@@ -113,7 +112,9 @@ class App extends React.Component {
 
     return (
       <div style={{ textAlign: 'center' }}>
-        <h1>Enter the multiaddr for an IPFS node HTTP API</h1>
+        <h1>Welcome to Github Commit NFT</h1>
+        <h2>In this page of the app you can upload your github commit hash to IPFS</h2>
+        <br/><br/>
         <form>
           <input id="connect-input" type="text" defaultValue="/ip4/127.0.0.1/tcp/5001" ref={this.multiaddr} />
           <input id="connect-submit" type="button" value="Connect" onClick={this.connect} />
