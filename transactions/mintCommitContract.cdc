@@ -15,11 +15,9 @@ transaction {
 
   execute {
       let metadata : {String : String} = {
-          "name": "The Big Swing",
-          "swing_velocity": "29", 
-          "swing_angle": "45", 
-          "rating": "5",
-          "uri": "ipfs://QmRZdc3mAMXpv6Akz9Ekp1y4vDSjazTx2dCQRkxVy1yUj6"
+          "github_username": "wilkesalex",
+          "github_commit_url": "https://github.com/wilkesalex/gcnft/commit/7ae592b0836fc126c4d94154efdce09e97a32a4b", 
+          "github_commit_ipfs_uri": "ipfs://QmRvaBPPnuV9YoUE4bmtsqcZopP7tnK2x4ZGWwndFLcaje"
       }
       let newNFT <- self.minterRef.mintNFT()
   
