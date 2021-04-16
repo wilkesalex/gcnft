@@ -5,11 +5,9 @@ import {A} from "hookrouter"
 
 export default function MintNfts() {
     const initForm = {
-        name: "",
-        velocity: "",
-        rating: "",
-        angle: "",
-        uri: "",
+      github_username: "",
+      github_commit_url: "",
+      github_commit_ipfs_uri: "",
       };
     const [form, setForm] = useState(initForm);
    
@@ -45,11 +43,9 @@ export default function MintNfts() {
 
                 execute {
                     let metadata : {String : String} = {
-                        "name": "amala",
-                        "swing_velocity": "50", 
-                        "swing_angle": "36", 
-                        "rating": "5",
-                        "uri": "uri"
+                      "github_username": "wilkesalex",
+                      "github_commit_url": "https://github.com/wilkesalex/gcnft/commit/7ae592b0836fc126c4d94154efdce09e97a32a4b", 
+                      "github_commit_ipfs_uri": "ipfs://QmRvaBPPnuV9YoUE4bmtsqcZopP7tnK2x4ZGWwndFLcaje"
                     }
                     let newNFT <- self.minterRef.mintNFT()
                 
@@ -81,24 +77,16 @@ export default function MintNfts() {
       <form  class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
         <p class="text-gray-800 font-medium"> information</p>
         <div class="">
-          <label class="block text-sm text-gray-00" for="cus_name">Name</label>
-          <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="cus_name" name="name" type="text" required="" placeholder="Your Name" value={form.name}  onChange={handleChange} aria-label="Name"/>
+          <label class="block text-sm text-gray-00" for="github_username">Github Username</label>
+          <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="github_username" name="github_username" type="text" required="" placeholder="Your Github Username" value={form.name}  onChange={handleChange} aria-label="Name"/>
         </div>
         <div class="mt-2">
-          <label class="block text-sm text-gray-600" for="cus_email">velocity</label>
-          <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="cus_email" name="velocity" value={form.velocity}  onChange={handleChange} type="text" required="" placeholder="swing velocity" aria-label="Email"/>
-        </div>
-        <div class="mt-2">
-          <label class=" block text-sm text-gray-600" for="cus_email">Rating</label>
-          <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="rating" type="text" value={form.rating}  onChange={handleChange}  required="" placeholder="rating" aria-label="Email"/>
-        </div>
-        <div class="mt-2">
-          <label class="hidden text-sm block text-gray-600" for="cus_email">Angle</label>
-          <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" name="angle" type="text" required="" value={form.angle}  onChange={handleChange} placeholder="angle" aria-label="Email"/>
+          <label class="block text-sm text-gray-600" for="github_commit_url">Github Commit URL</label>
+          <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="github_commit_url" name="github_commit_url" value={form.velocity}  onChange={handleChange} type="text" required="" placeholder="Github Commit URL" aria-label="Email"/>
         </div>
         <div class="">
-          <label class="block text-sm text-gray-600" for="cus_name">URI</label>
-          <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_name" name="uri" type="text" required="" placeholder="uri" value={form.uri}  onChange={handleChange} aria-label="Name"/>
+          <label class="block text-sm text-gray-600" for="github_commit_ipfs_uri">IPFS URI to Github Commit Hash</label>
+          <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="github_commit_ipfs_uri" name="github_commit_ipfs_uri" type="text" required="" placeholder="IPFS URI" value={form.uri}  onChange={handleChange} aria-label="Name"/>
         </div>
         <div class="mt-4">
           <button onClick={mintToken} class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Mint token</button>
